@@ -8,6 +8,7 @@ incBtn.addEventListener("click",function(){
     inc++;
     document.querySelector(".normal").innerHTML = "Your Current Count is : " + inc;
     document.querySelector(".error").innerHTML = "";
+    clrBtn.style.display = `block`;
 })
 
 decBtn.addEventListener("click",function(){
@@ -18,10 +19,22 @@ decBtn.addEventListener("click",function(){
     else{
         inc = 0;
         document.querySelector(".error").innerHTML = "Error cannot go below 0";
+        clrBtn.style.display = `none`;
     }
 })
 
 clrBtn.addEventListener("click",function(){
+    inc = 0;
     document.querySelector(".error").innerHTML = "";
-    document.querySelector(".normal").innerHTML = "";
+    document.querySelector(".normal").innerHTML = "Your Current Count is : " + inc;
+    clrBtn.style.display = `none`;
 })
+
+if(inc > 1){
+    incBtn.style.display = `block`;
+    decBtn.style.display = `block`;
+    clrBtn.style.display = `block`;
+}
+
+
+

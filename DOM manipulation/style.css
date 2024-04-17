@@ -29,6 +29,7 @@ hr{
     padding-top: 10px;
 }
 .normal_btn{
+    width: 150px;
     border: none;
     padding: 10px 30px;
     background-color: white;
@@ -36,8 +37,9 @@ hr{
     cursor: pointer;
 }
 .white_btn{
+    width: 150px;
     border: none;
-    padding: 9px 50px;
+    padding: 10px 30px;
     background-color: black;
     border: 1px solid white;
     color: white;
@@ -51,7 +53,16 @@ hr{
 }
 .btn-class{
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
     padding-top: 40px;
+}
+@media screen and (max-width: 435px) {
+    .container{
+        padding: 30px 25px;
+    }
+}
+#clear{
+    display: none;
 }
 
